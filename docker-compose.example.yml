@@ -1,0 +1,79 @@
+# Example: Kombüse with the PDF renderer. Copy to docker-compose.yml and adjust KOMBUESE_URLS.
+services:
+  kombuese:
+    build: .
+    container_name: kombuese
+    restart: unless-stopped
+    ports:
+      - "9926:9926"
+    environment:
+      # Addresses you open the app with. An https address enables camera (barcode), screen wake lock and sharing.
+      - KOMBUESE_URLS=http://kitchen.lan:9926,https://kitchen.example.org
+      - KOMBUESE_INTERNAL_URL=http://kombuese:9926
+      - KOMBUESE_GOTENBERG_URL=http://gotenberg:3000
+      - TZ=Europe/Berlin
+      - KOMBUESE_DEMO=${KOMBUESE_DEMO:-}   # true/en/de: first start of an empty installation with the demo household
+      # - KOMBUESE_SECRET_KEY=change-me-to-a-long-random-string   # encrypts stored credentials
+      # AI runs (Settings → AI): Claude via the Anthropic API or any OpenAI-compatible server such as Ollama.
+      # - KOMBUESE_ALLOW_PRIVATE_URLS=true   # only if recipe pages in your own network should be readable
+      # Recipes from cooking videos (docs/video.md): Whisper below writes down what is said. Settings → Video & Whisper.
+      - KOMBUESE_WHISPER_URL=http://whisper:9000
+      - KOMBUESE_WHISPER_API=asr
+      # - KOMBUESE_VIDEO=off   # switch the video import off for new households
+    volumes:
+      - ./data:/data
+    mem_limit: 512m   # video import runs ffmpeg and yt-dlp; 128m is enough without AI runs and videos
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+
+  # Speech to text for the video import. Only the app talks to it (no port published). CPU, model "small":
+  # about 1 GB RAM, a 1-minute video takes roughly 20-60 s. The model is downloaded once into ./whisper-cache.
+  # Already have a Whisper (or want the OpenAI API)? Remove this service and set the address in the app instead.
+  whisper:
+    image: onerahmet/openai-whisper-asr-webservice:v1.10.0
+    container_name: kombuese-whisper
+    restart: unless-stopped
+    environment:
+      - ASR_ENGINE=faster_whisper
+      - ASR_MODEL=small
+      - ASR_QUANTIZATION=int8
+      - ASR_DEVICE=cpu
+    volumes:
+      - ./whisper-cache:/root/.cache
+    mem_limit: 2g
+    security_opt: [no-new-privileges:true]
+
+  # Renders recipe PDFs with Chromium. Not exposed, may only load pages of the app.
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    container_name: kombuese-pdf
+    restart: unless-stopped
+    command:
+      - gotenberg
+      - --chromium-allow-list=^http://kombuese:9926/.*
+      - --chromium-restart-after=20
+      - --api-timeout=60s
+      - --libreoffice-disable-routes
+      - --webhook-disable
+      - --prometheus-disable-collect
+      - --log-level=warn
+    mem_limit: 1g
+    security_opt: [no-new-privileges:true]
+
+  # HTTPS with your own domain (see docs/installation.md, "HTTPS in 5 minutes"): uncomment, create a Caddyfile with
+  #   kitchen.example.org {
+  #       reverse_proxy kombuese:9926
+  #   }
+  # and set KOMBUESE_URLS=https://kitchen.example.org and KOMBUESE_TRUSTED_PROXIES=172.16.0.0/12 above.
+  # caddy:
+  #   image: caddy:2
+  #   container_name: kombuese-https
+  #   restart: unless-stopped
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #     - "443:443/udp"
+  #   volumes:
+  #     - ./Caddyfile:/etc/caddy/Caddyfile:ro
+  #     - ./caddy-data:/data
+  #     - ./caddy-config:/config

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kombüse</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kombüse">
+<meta name="theme-color" content="#1c1714">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<script>try { const m = localStorage.getItem('ft-theme'); if (m === 'light' || m === 'dark') document.documentElement.dataset.theme = m; } catch (e) {}</script>
+<style>
+:root { --bg: #f6f1ea; --card: #fffdf9; --ink: #2a211b; --muted: #8a7c70; --line: #e6ddd2; --chip: #f0e7dc; --accent: #ef6c45; --nope: #d9534f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme=light]) { --bg: #1c1714; --card: #2a231e; --ink: #f3ebe2; --muted: #a89a8c; --line: #3d342d; --chip: #3a312a; } }
+:root[data-theme=dark] { --bg: #1c1714; --card: #2a231e; --ink: #f3ebe2; --muted: #a89a8c; --line: #3d342d; --chip: #3a312a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 380px; margin: 0 auto; padding: calc(48px + env(safe-area-inset-top)) 20px 40px; }
+h1 { display: flex; align-items: center; gap: 10px; font-size: 26px; margin: 0 0 6px; letter-spacing: -.3px; }
+h1 img { width: 40px; height: 40px; border-radius: 10px; }
+h1 span { color: var(--accent); }
+p.muted { color: var(--muted); margin: 0 0 22px; }
+form { display: grid; gap: 12px; background: var(--card); padding: 18px; border-radius: 18px; box-shadow: 0 6px 24px rgba(60,40,20,.12); }
+label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+[hidden] { display: none !important; }
+input { font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 11px 12px; }
+button, .sso { border: 0; border-radius: 999px; background: var(--accent); color: #fff; font: inherit; font-weight: 700; padding: 13px; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+.sso { background: var(--chip); color: var(--ink); margin-top: 14px; }
+button.second { background: var(--chip); color: var(--ink); }
+.check { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink); }
+.check input { width: 18px; height: 18px; margin: 0; padding: 0; }
+.error { color: var(--nope); font-size: 14px; min-height: 1em; margin: 0; }
+.or { text-align: center; color: var(--muted); font-size: 13px; margin: 16px 0 0; }
+.lang { text-align: center; margin-top: 26px; font-size: 13px; }
+.lang a { color: var(--muted); margin: 0 6px; }
+</style>
+</head>
+<body>
+<main>
+  <h1><img src="icon.svg" alt=""><b>Kom<span>büse</span></b></h1>
+  <p class="muted" id="intro" data-t="login.signIn">Sign in</p>
+  <form id="f" onsubmit="submitLogin(event)">
+    <label data-t="login.username">Username<input id="u" autocomplete="username" autocapitalize="off" autocorrect="off" required></label>
+    <label id="ldn" hidden data-t="login.displayName">Your name<input id="dn" autocomplete="name"></label>
+    <label data-t="login.password">Password<input id="p" type="password" autocomplete="current-password" required></label>
+    <label id="l2" hidden data-t="login.repeat">Repeat password<input id="p2" type="password" autocomplete="new-password"></label>
+    <label class="check" id="lr"><input id="r" type="checkbox" checked><span data-t="login.remember">Stay signed in</span></label>
+    <p class="error" id="error"></p>
+    <button id="b" data-t="login.signIn">Sign in</button>
+  </form>
+  <div id="sso"></div>
+  <p class="or" id="invLink"><a href="#" onclick="askInvite();return false" data-t="login.haveInvite">I have an invitation</a></p>
+  <div id="restore" hidden>
+    <p class="or" data-t="login.or">or</p>
+    <form onsubmit="restoreBackup(event)">
+      <label data-t="login.restoreLabel">Moving: restore a backup of another Kombüse<input id="bf" type="file" accept=".gz,.tgz,application/gzip" required></label>
+      <p class="error" id="berror"></p>
+      <button id="bb" class="second" data-t="login.restore">Restore backup</button>
+    </form>
+  </div>
+  <div class="lang"><a href="#" onclick="setLang('de');return false">Deutsch</a>·<a href="#" onclick="setLang('en');return false">English</a></div>
+</main>
+<script src="i18n.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+i18nStatic();
+let SETUP = false;
+const offline = () => ({ error: t('common.unreachable') });
+async function start() {
+  const s = await fetch('auth/status').then(x => x.json()).catch(() => ({}));
+  SETUP = !!s.setup;
+  if (SETUP) {
+    $('#intro').textContent = t('login.welcome');
+    $('#l2').hidden = false; $('#p').autocomplete = 'new-password'; $('#b').textContent = t('login.create');
+    $('#lr').hidden = true;  // setup always stays signed in
+    $('#restore').hidden = false;  // new installation: can also start from a backup
+  }
+  if (new URLSearchParams(location.search).get('ok') === 'backup')
+    $('#intro').textContent = SETUP ? t('login.restoredNoAccount') : t('login.restoredSignIn');
+  if (s.oidc) $('#sso').innerHTML = `<p class="or">${t('login.or')}</p><a class="sso" href="auth/oidc/start">${t('login.signInWith', { name: s.oidc_name.replace(/[<>&"]/g, '') })}</a>`;
+  const code = new URLSearchParams(location.search).get('invite');
+  if (SETUP) $('#invLink').hidden = true; else if (code) await showInvite(code, s);
+  const f = new URLSearchParams(location.search).get('fehler'); if (f) $('#error').textContent = srv(f);  // error of the SSO sign-in (German, from the server)
+}
+let INVITE = null;  // invitation link or code: a new account in that household
+async function showInvite(code, s) {
+  const r = await fetch('auth/invite?code=' + encodeURIComponent(code)).then(x => x.json()).catch(offline);
+  if (r.error) { $('#error').textContent = srv(r.error); return; }
+  INVITE = code;
+  $('#intro').textContent = t('login.inviteTo', { household: r.household || 'Kombüse' });
+  $('#l2').hidden = $('#ldn').hidden = false; $('#lr').hidden = $('#invLink').hidden = true;
+  $('#p').autocomplete = 'new-password'; $('#b').textContent = t('login.create');
+  if (s.oidc) $('#sso a').href = 'auth/oidc/start?invite=' + encodeURIComponent(code);
+}
+function askInvite() {
+  const c = window.prompt(t('login.inviteCode'));
+  if (c && c.trim()) location.search = '?invite=' + encodeURIComponent(c.trim());
+}
+async function submitLogin(e) {
+  e.preventDefault(); $('#error').textContent = '';
+  if ((SETUP || INVITE) && $('#p').value !== $('#p2').value) { $('#error').textContent = t('login.mismatch'); return; }
+  if (INVITE) {
+    $('#b').disabled = true;
+    const r = await fetch('auth/invite', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: INVITE,
+      username: $('#u').value.trim(), password: $('#p').value, display_name: $('#dn').value.trim() }) }).then(x => x.json()).catch(offline);
+    $('#b').disabled = false;
+    if (r.error) { $('#error').textContent = srv(r.error); return; }
+    return location.replace('./');
+  }
+  $('#b').disabled = true;
+  const r = await fetch(SETUP ? 'auth/setup' : 'auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username: $('#u').value.trim(), password: $('#p').value, remember: $('#r').checked }) }).then(x => x.json()).catch(offline);
+  $('#b').disabled = false;
+  if (r.error) { $('#error').textContent = srv(r.error); return; }
+  location.replace('./');
+}
+async function restoreBackup(e) {
+  e.preventDefault(); $('#berror').textContent = '';
+  const f = $('#bf').files[0]; if (!f) return;
+  $('#bb').disabled = true; $('#bb').textContent = t('login.restoring');
+  const r = await fetch('auth/setup/import', { method: 'POST', headers: { 'Content-Type': 'application/gzip', 'X-Kombuese': '1' }, body: f })
+    .then(x => x.json()).catch(offline);
+  $('#bb').disabled = false; $('#bb').textContent = t('login.restore');
+  if (r.error) { $('#berror').textContent = srv(r.error); return; }
+  location.replace('login?ok=backup');
+}
+start();
+</script>
+</body>
+</html>

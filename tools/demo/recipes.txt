@@ -1,0 +1,472 @@
+# Demo recipes for Kombüse (tools/demo.py). Written for the demo, free to use under the project license.
+# Format: "## key" starts a recipe. "name/desc/prep: English | German". "meta: category; tags; servings; total; prep; cook".
+# "nw: kcal protein carbs sugar fat saturated fibre sodium(g)" per serving. "img: key" in tools/demo/images.
+# "- amount | unit | English | German | lexicon category | note en | note de" (units are the app's internal units).
+# "> English step | German step". "heat: fridge-min frozen-min stand-min | hint en | hint de | instead en | instead de" =
+# reheating per portion at 800 W ("-" = do not freeze, "cold | hint en | hint de" = eaten cold). Lexicon categories: O fruit & veg, G spices, W condiments, R grains, K cans,
+# B baking, M dairy, F meat, BW bread, S seafood, OL oils, T frozen, X other.
+
+## oats
+name: Berry overnight oats | Beeren-Overnight-Oats
+desc: Creamy oats that soak overnight in the fridge – four jars on prep day and breakfast is done until Thursday. | Cremige Haferflocken, die über Nacht im Kühlschrank quellen – am Vorbereitungstag vier Gläser abfüllen, und das Frühstück steht bis Donnerstag.
+meta: Frühstück; Mealprep, Schnell, Vegetarisch; 4; 10 min; 10 min;
+nw: 390 18 52 16 12 3 8 0.15
+img: oats
+- 200 | g | rolled oats | Haferflocken | R
+- 500 | g | Greek yogurt | griechischer Joghurt | M
+- 400 | ml | milk | Milch | M
+- 3 | EL | chia seeds | Chiasamen | R
+- 2 | EL | honey | Honig | W
+- 300 | g | frozen mixed berries | TK-Beerenmischung | T
+- 1 | Prise | salt | Salz | G
+> Stir oats, chia seeds, salt, honey, yogurt and milk together in a large bowl. | Haferflocken, Chiasamen, Salz, Honig, Joghurt und Milch in einer großen Schüssel verrühren.
+> Put a layer of frozen berries into four jars, fill up with the oat mixture and top with more berries. | Etwas TK-Beeren in vier Gläser geben, die Hafermischung darauf verteilen und mit Beeren abschließen.
+> Close the jars and leave them in the fridge for at least 6 hours. Stir before eating, add a splash of milk if too thick. | Gläser verschließen und mindestens 6 Stunden in den Kühlschrank stellen. Vor dem Essen umrühren, bei Bedarf einen Schuss Milch dazu.
+prep: Keeps 4 days in the fridge. Do not freeze: the texture turns watery. | Hält 4 Tage im Kühlschrank. Nicht einfrieren, die Konsistenz wird wässrig.
+heat: cold | Eat cold; stir and add a splash of milk if too thick. | Kalt essen; umrühren, bei Bedarf einen Schuss Milch dazu.
+
+## eggbites
+name: Spinach and feta egg muffins | Spinat-Feta-Eiermuffins
+desc: Little baked omelettes from the muffin tin. Warm in the microwave in 40 seconds, also straight from the freezer. | Kleine Ofen-Omeletts aus der Muffinform. In 40 Sekunden in der Mikrowelle warm, auch direkt aus dem Tiefkühler.
+meta: Frühstück; Mealprep, Vegetarisch; 12; 35 min; 10 min; 25 min
+nw: 95 7 2 1 6 3 0.5 0.25
+- 10 | Stück | eggs | Eier | M
+- 100 | g | baby spinach | Babyspinat | O
+- 100 | g | feta | Feta | M
+- 1 | Stück | red bell pepper | rote Paprika | O
+- 4 | Stück | spring onions | Frühlingszwiebeln | O
+- 50 | ml | milk | Milch | M
+- 1 | TL | olive oil | Olivenöl | OL | for the tin | für die Form
+- 1 | Prise | salt | Salz | G
+- 1 | Prise | black pepper | schwarzer Pfeffer | G
+> Heat the oven to 180 °C (fan 160 °C) and oil a 12-hole muffin tin. | Backofen auf 180 °C (Umluft 160 °C) vorheizen, ein 12er-Muffinblech einfetten.
+> Dice the pepper, slice the spring onions, chop the spinach roughly and divide everything between the holes. Crumble the feta on top. | Paprika würfeln, Frühlingszwiebeln in Ringe schneiden, Spinat grob hacken und alles auf die Mulden verteilen. Feta darüberbröseln.
+> Whisk eggs, milk, salt and pepper and pour over the vegetables. | Eier mit Milch, Salz und Pfeffer verquirlen und über das Gemüse gießen.
+> Bake for 20–25 minutes until set and lightly golden. Leave to cool in the tin for 5 minutes. | 20–25 Minuten backen, bis die Masse gestockt und leicht gebräunt ist. 5 Minuten in der Form abkühlen lassen.
+prep: Keeps 4 days in the fridge, freezes for 2 months. Reheat 40–60 seconds in the microwave. | Hält 4 Tage im Kühlschrank, lässt sich 2 Monate einfrieren. 40–60 Sekunden in der Mikrowelle erwärmen.
+heat: 1 2 0 | Two muffins on kitchen paper, not too long or they turn rubbery. | Zwei Muffins auf Küchenpapier, nicht zu lange, sonst werden sie gummiartig.
+
+## shakshuka
+name: Shakshuka with feta | Shakshuka mit Feta
+desc: Eggs poached in a spiced tomato and pepper sauce, a weekend breakfast straight from the pan with crusty bread. | In würziger Tomaten-Paprika-Sauce pochierte Eier – ein Wochenendfrühstück direkt aus der Pfanne, dazu knuspriges Brot.
+meta: Frühstück; Vegetarisch; 2; 30 min; 10 min; 20 min
+nw: 420 22 30 12 23 8 6 1.4
+img: shakshuka
+- 1 | EL | olive oil | Olivenöl | OL
+- 1 | Stück | onion | Zwiebel | O
+- 1 | Stück | red bell pepper | rote Paprika | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | TL | ground cumin | Kreuzkümmel, gemahlen | G
+- 1 | TL | sweet paprika | Paprikapulver, edelsüß | G
+- 1 | Dose | chopped tomatoes | gehackte Tomaten | K | 400 g | 400 g
+- 4 | Stück | eggs | Eier | M
+- 50 | g | feta | Feta | M
+- 2 | Scheibe | sourdough bread | Sauerteigbrot | BW
+> Fry the sliced onion and pepper in the oil over medium heat for 6–8 minutes until soft. Add garlic, cumin and paprika and stir for 1 minute. | Zwiebel und Paprika in Streifen im Öl bei mittlerer Hitze 6–8 Minuten weich braten. Knoblauch, Kreuzkümmel und Paprikapulver dazu und 1 Minute mitrühren.
+> Add the tomatoes, season with salt and simmer for 8 minutes until slightly thickened. | Tomaten dazugeben, salzen und 8 Minuten einköcheln lassen.
+> Make four hollows, crack an egg into each, cover and cook for 5–7 minutes until the whites are set. | Vier Mulden formen, je ein Ei hineinschlagen, Deckel auflegen und 5–7 Minuten garen, bis das Eiweiß gestockt ist.
+> Crumble the feta over the top and serve with toasted bread. | Feta darüberbröseln und mit geröstetem Brot servieren.
+prep: Best made fresh. The sauce alone keeps 3 days in the fridge and freezes for 3 months. | Am besten frisch. Die Sauce allein hält 3 Tage im Kühlschrank und lässt sich 3 Monate einfrieren.
+heat: 2 5 1 | Best fresh: reheat the sauce covered and poach fresh eggs in it. | Am besten frisch: die Sauce abgedeckt erwärmen und frische Eier darin pochieren. | pan over medium heat, 5 min, then add the eggs | Pfanne bei mittlerer Hitze, 5 min, dann die Eier dazu
+
+## pancakes
+name: Banana oat pancakes | Bananen-Hafer-Pancakes
+desc: Fluffy pancakes without added sugar, sweetened by ripe bananas. The batter is done in the blender in two minutes. | Fluffige Pancakes ohne Zuckerzusatz, gesüßt mit reifen Bananen. Der Teig ist in zwei Minuten im Mixer fertig.
+meta: Frühstück; Schnell, Vegetarisch; 2; 20 min; 5 min; 15 min
+nw: 450 19 62 20 14 4 7 0.4
+img: pancakes
+- 2 | Stück | ripe bananas | reife Bananen | O
+- 2 | Stück | eggs | Eier | M
+- 100 | g | rolled oats | Haferflocken | R
+- 150 | ml | milk | Milch | M
+- 1 | TL | baking powder | Backpulver | B
+- 1 | Prise | ground cinnamon | Zimt | G
+- 1 | TL | butter | Butter | M | for the pan | für die Pfanne
+- 150 | g | Greek yogurt | griechischer Joghurt | M | to serve | zum Servieren
+> Blend bananas (keep a few slices for the top), eggs, oats, milk, baking powder and cinnamon until smooth. Let the batter rest for 5 minutes. | Bananen (ein paar Scheiben zum Garnieren übrig lassen), Eier, Haferflocken, Milch, Backpulver und Zimt glatt mixen. Teig 5 Minuten quellen lassen.
+> Melt a little butter in a non-stick pan over medium heat. Cook small pancakes for 2 minutes per side until golden. | Etwas Butter in einer beschichteten Pfanne bei mittlerer Hitze schmelzen. Kleine Pancakes pro Seite 2 Minuten goldbraun backen.
+> Serve with yogurt and banana slices. | Mit Joghurt und Bananenscheiben servieren.
+prep: Cooked pancakes freeze for 2 months; reheat in the toaster. | Gebackene Pancakes lassen sich 2 Monate einfrieren, im Toaster aufbacken.
+heat: 0.75 1.5 0 | Side by side, not stacked. | Nebeneinander legen, nicht stapeln. | toaster or dry pan, 1–2 min | Toaster oder Pfanne ohne Fett, 1–2 min
+
+## burrito
+name: Freezer breakfast burritos | Frühstücks-Burritos zum Einfrieren
+desc: Scrambled eggs, black beans, peppers and cheese rolled into tortillas, wrapped one by one and frozen for busy mornings. | Rührei, schwarze Bohnen, Paprika und Käse in Tortillas gerollt, einzeln verpackt und eingefroren für eilige Morgen.
+meta: Frühstück; Mealprep; 8; 40 min; 20 min; 20 min
+nw: 410 21 40 3 18 7 7 0.9
+img: burrito
+- 8 | Stück | large tortillas | große Tortillas | BW
+- 10 | Stück | eggs | Eier | M
+- 1 | Dose | black beans | schwarze Bohnen | K | drained | abgetropft
+- 2 | Stück | red bell pepper | rote Paprika | O
+- 1 | Stück | onion | Zwiebel | O
+- 150 | g | grated cheddar | geriebener Cheddar | M
+- 1 | TL | smoked paprika | geräuchertes Paprikapulver | G
+- 1 | EL | olive oil | Olivenöl | OL
+- 4 | EL | salsa | Salsa | W
+> Fry diced onion and pepper in the oil for 6 minutes. Add beans and smoked paprika, warm through and season. | Zwiebel- und Paprikawürfel im Öl 6 Minuten braten. Bohnen und Rauchpaprika dazu, erwärmen und abschmecken.
+> Whisk the eggs with salt, scramble them softly in a second pan and let everything cool for 10 minutes. | Eier mit Salz verquirlen, in einer zweiten Pfanne weich stocken lassen und alles 10 Minuten abkühlen lassen.
+> Divide eggs, bean mixture, cheese and salsa between the tortillas, fold in the sides and roll up tightly. | Ei, Bohnenmischung, Käse und Salsa auf die Tortillas verteilen, Seiten einschlagen und fest aufrollen.
+> Wrap each burrito in baking paper and foil, label with the date and freeze. | Jeden Burrito in Backpapier und Alufolie wickeln, mit Datum beschriften und einfrieren.
+prep: Freezes for 3 months. From frozen: 2 minutes in the microwave without foil, then 5 minutes in a dry pan for a crisp outside. | Lässt sich 3 Monate einfrieren. Gefroren ohne Folie 2 Minuten in die Mikrowelle, dann 5 Minuten in einer trockenen Pfanne knusprig braten.
+heat: 1.5 3.5 1 | Remove the foil, wrap in a damp paper towel, turn halfway. | Folie ab, in feuchtes Küchenpapier wickeln, nach der Hälfte wenden. | afterwards 3–5 min in a dry pan for a crisp outside | danach 3–5 min in der Pfanne ohne Fett, damit er knusprig wird
+
+## chickpea
+name: Chickpea spinach curry | Kichererbsen-Spinat-Curry
+desc: A mild, creamy coconut curry from the cupboard, ready in half an hour and even better on day two. Vegan. | Ein mildes, cremiges Kokoscurry aus dem Vorratsschrank, in einer halben Stunde fertig und am zweiten Tag noch besser. Vegan.
+meta: Hauptgericht; Mealprep, Vegetarisch, Schnell; 4; 35 min; 10 min; 25 min
+nw: 520 17 62 9 22 14 13 1.0
+img: chickpea
+- 1 | EL | olive oil | Olivenöl | OL
+- 1 | Stück | onion | Zwiebel | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | Stück | ginger | Ingwerwurzel | O | thumb-sized | daumengroß
+- 2 | EL | curry powder | Currypulver | G
+- 2 | Dose | chickpeas | Kichererbsen | K | drained | abgetropft
+- 1 | Dose | coconut milk | Kokosmilch | K
+- 1 | Dose | chopped tomatoes | gehackte Tomaten | K
+- 200 | g | baby spinach | Babyspinat | O
+- 240 | g | basmati rice | Basmatireis | R
+- 1 | Stück | lime | Limette | O
+> Cook the rice according to the packet. | Reis nach Packungsangabe kochen.
+> Soften the chopped onion in the oil for 5 minutes, add grated garlic, ginger and curry powder and fry for 1 minute. | Gehackte Zwiebel im Öl 5 Minuten glasig dünsten, geriebenen Knoblauch, Ingwer und Currypulver dazu und 1 Minute anrösten.
+> Add chickpeas, coconut milk and tomatoes and simmer gently for 15 minutes. | Kichererbsen, Kokosmilch und Tomaten dazugeben und 15 Minuten sanft köcheln lassen.
+> Stir in the spinach until wilted, season with salt and lime juice and serve with the rice. | Spinat unterrühren, bis er zusammenfällt, mit Salz und Limettensaft abschmecken und mit dem Reis servieren.
+prep: Keeps 4 days in the fridge and freezes for 3 months (freeze the rice separately or cook it fresh). Reheat in a pan with a splash of water. | Hält 4 Tage im Kühlschrank und lässt sich 3 Monate einfrieren (Reis getrennt einfrieren oder frisch kochen). In der Pfanne mit einem Schuss Wasser erwärmen.
+heat: 2.5 6 1 | Covered with a splash of water, stir halfway. | Abgedeckt mit einem Schluck Wasser, nach der Hälfte umrühren. | pan with a splash of water, 5 min | Pfanne mit einem Schluck Wasser, 5 min
+
+## chili
+name: Chili con carne | Chili con Carne
+desc: A big pot of beef and bean chili with a hint of cocoa – mild enough for everyone, with hot sauce on the side. | Ein großer Topf Chili mit Rind und Bohnen und einem Hauch Kakao – mild für alle, scharfe Sauce gibt es dazu.
+meta: Hauptgericht; Mealprep; 6; 1 h 15 min; 20 min; 55 min
+nw: 560 38 52 9 20 7 14 1.3
+img: chili
+- 1 | EL | olive oil | Olivenöl | OL
+- 750 | g | minced beef | Rinderhackfleisch | F
+- 2 | Stück | onion | Zwiebel | O
+- 3 | Zehe | garlic | Knoblauch | O
+- 2 | Stück | red bell pepper | rote Paprika | O
+- 2 | TL | ground cumin | Kreuzkümmel, gemahlen | G
+- 2 | TL | sweet paprika | Paprikapulver, edelsüß | G
+- 1 | TL | dried oregano | Oregano, getrocknet | G
+- 1 | EL | cocoa powder | Kakaopulver | B
+- 2 | Dose | chopped tomatoes | gehackte Tomaten | K
+- 2 | Dose | kidney beans | Kidneybohnen | K | drained | abgetropft
+- 1 | Dose | sweetcorn | Mais | K | drained | abgetropft
+- 2 | EL | tomato paste | Tomatenmark | W
+- 360 | g | basmati rice | Basmatireis | R
+> Brown the mince in the oil in a large pot over high heat for 8 minutes. | Hackfleisch im Öl in einem großen Topf bei starker Hitze 8 Minuten krümelig anbraten.
+> Add diced onions, pepper and garlic and fry for 5 minutes. Stir in tomato paste and spices and toast for 1 minute. | Zwiebel-, Paprika- und Knoblauchwürfel dazu und 5 Minuten braten. Tomatenmark und Gewürze unterrühren und 1 Minute anrösten.
+> Add tomatoes, cocoa and 200 ml water, cover and simmer gently for 40 minutes, stirring now and then. | Tomaten, Kakao und 200 ml Wasser dazugeben und zugedeckt 40 Minuten sanft köcheln lassen, ab und zu umrühren.
+> Add beans and corn for the last 10 minutes. Season with salt. Serve with rice. | Bohnen und Mais für die letzten 10 Minuten dazugeben. Salzen und mit Reis servieren.
+prep: Keeps 4 days in the fridge, freezes for 3 months in portions. Thaw overnight in the fridge and reheat with a little water. | Hält 4 Tage im Kühlschrank, portionsweise 3 Monate einfrierbar. Über Nacht im Kühlschrank auftauen und mit etwas Wasser erwärmen.
+heat: 3 7 1 | Covered, stir halfway, add a little water. | Abgedeckt, nach der Hälfte umrühren, etwas Wasser dazu. | pot over medium heat, 5–8 min | Topf bei mittlerer Hitze, 5–8 min
+
+## dal
+name: Red lentil dal | Rote-Linsen-Dal
+desc: Silky red lentils with turmeric, finished with a sizzling spiced butter. Cheap, filling and ready in 30 minutes. | Samtige rote Linsen mit Kurkuma, zum Schluss mit gewürzter Butter beträufelt. Günstig, sättigend und in 30 Minuten fertig.
+meta: Hauptgericht; Mealprep, Vegetarisch, Schnell; 4; 30 min; 5 min; 25 min
+nw: 440 21 60 5 12 6 11 0.9
+img: dal
+- 300 | g | red lentils | rote Linsen | R
+- 1 | Stück | onion | Zwiebel | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | Stück | ginger | Ingwerwurzel | O | thumb-sized | daumengroß
+- 1 | TL | ground turmeric | Kurkuma | G
+- 1 | Dose | chopped tomatoes | gehackte Tomaten | K
+- 2 | EL | butter | Butter | M
+- 1 | TL | cumin seeds | Kreuzkümmelsamen | G
+- 150 | g | baby spinach | Babyspinat | O
+- 4 | Stück | flatbreads | Fladenbrote | BW
+> Rinse the lentils and simmer them with turmeric, tomatoes and 900 ml water for 20 minutes until soft, stirring often. | Linsen abspülen und mit Kurkuma, Tomaten und 900 ml Wasser 20 Minuten weich köcheln, dabei oft umrühren.
+> Meanwhile fry the onion in half the butter until golden, add garlic and ginger and stir into the lentils with the spinach. | Inzwischen die Zwiebel in der Hälfte der Butter goldbraun braten, Knoblauch und Ingwer dazu und mit dem Spinat unter die Linsen rühren.
+> Heat the rest of the butter with the cumin seeds until they crackle and pour over the dal. Season with salt and serve with flatbread. | Restliche Butter mit dem Kreuzkümmel erhitzen, bis er knistert, über das Dal geben. Salzen und mit Fladenbrot servieren.
+prep: Keeps 4 days in the fridge and freezes for 3 months. It thickens when cold: add water when reheating. | Hält 4 Tage im Kühlschrank und lässt sich 3 Monate einfrieren. Dickt kalt nach, beim Erwärmen Wasser zugeben.
+heat: 2.5 6 1 | Add 2 tbsp water (it thickens when cold), stir halfway. | 2 EL Wasser dazu (es dickt im Kühlschrank ein), nach der Hälfte umrühren. | pot with a little water, 5 min | Topf mit etwas Wasser, 5 min
+
+## goulash
+name: Beef goulash with paprika | Rindergulasch mit Paprika
+desc: Slowly braised beef with lots of onions and paprika. Two hours on the stove with almost no work, and six portions for the week. | Langsam geschmortes Rindfleisch mit vielen Zwiebeln und Paprika. Zwei Stunden auf dem Herd fast ohne Arbeit, und sechs Portionen für die Woche.
+meta: Hauptgericht; Mealprep; 6; 2 h 20 min; 20 min; 2 h
+nw: 590 42 48 8 22 8 6 1.2
+img: goulash
+- 1 | kg | beef shoulder | Rinderschulter | F | in 3 cm cubes | in 3-cm-Würfeln
+- 2 | EL | sunflower oil | Sonnenblumenöl | OL
+- 4 | Stück | onion | Zwiebel | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 2 | Stück | red bell pepper | rote Paprika | O
+- 3 | EL | sweet paprika | Paprikapulver, edelsüß | G
+- 2 | EL | tomato paste | Tomatenmark | W
+- 1 | TL | caraway seeds | Kümmel | G
+- 750 | ml | beef stock | Rinderbrühe | W
+- 1 | kg | potatoes | Kartoffel | O
+> Brown the beef in batches in the oil over high heat and set aside. | Rindfleisch portionsweise im Öl bei starker Hitze anbraten und herausnehmen.
+> Fry the sliced onions in the same pot for 10 minutes until golden. Stir in garlic, tomato paste, paprika and caraway for 1 minute. | Zwiebelstreifen im selben Topf 10 Minuten goldbraun braten. Knoblauch, Tomatenmark, Paprikapulver und Kümmel 1 Minute mitrösten.
+> Return the meat, add the stock, cover and braise gently for 1 ½ hours. | Fleisch zurück in den Topf geben, Brühe angießen und zugedeckt 1 ½ Stunden sanft schmoren.
+> Add the diced peppers and peeled potato chunks and cook for another 25 minutes until the potatoes are soft. Season with salt and pepper. | Paprikawürfel und geschälte Kartoffelstücke dazugeben und weitere 25 Minuten garen, bis die Kartoffeln weich sind. Mit Salz und Pfeffer abschmecken.
+prep: Keeps 4 days in the fridge and freezes for 3 months (potatoes get a little softer). Reheat slowly in a pot. | Hält 4 Tage im Kühlschrank und lässt sich 3 Monate einfrieren (Kartoffeln werden etwas weicher). Langsam im Topf erwärmen.
+heat: 3 7 1 | Covered, stir halfway. | Abgedeckt, nach der Hälfte umrühren. | slowly in a pot, about 10 min | langsam im Topf, etwa 10 min
+
+## chickencurry
+name: Mild coconut chicken curry | Mildes Kokos-Hähnchen-Curry
+desc: Tender chicken thighs in a mild coconut and tomato sauce with peas – a curry the whole household agrees on. | Zarte Hähnchenschenkel in milder Kokos-Tomaten-Sauce mit Erbsen – ein Curry, auf das sich der ganze Haushalt einigt.
+meta: Hauptgericht; Mealprep, Hähnchen; 4; 45 min; 15 min; 30 min
+nw: 610 40 58 8 24 13 6 1.1
+img: chickencurry
+- 600 | g | chicken thigh fillets | Hähnchenschenkelfilets | F
+- 1 | EL | sunflower oil | Sonnenblumenöl | OL
+- 1 | Stück | onion | Zwiebel | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | Stück | ginger | Ingwerwurzel | O | thumb-sized | daumengroß
+- 2 | EL | mild curry paste | milde Currypaste | W
+- 1 | Dose | coconut milk | Kokosmilch | K
+- 200 | g | passata | passierte Tomaten | K
+- 150 | g | frozen peas | TK-Erbsen | T
+- 240 | g | basmati rice | Basmatireis | R
+> Cook the rice. Cut the chicken into bite-sized pieces and brown it in the oil for 5 minutes. | Reis kochen. Hähnchen in mundgerechte Stücke schneiden und im Öl 5 Minuten anbraten.
+> Add chopped onion, garlic and ginger and fry for 3 minutes, then the curry paste for 1 minute. | Gehackte Zwiebel, Knoblauch und Ingwer 3 Minuten mitbraten, dann die Currypaste 1 Minute anrösten.
+> Pour in coconut milk and passata and simmer for 15 minutes. Add the peas for the last 3 minutes and season. | Kokosmilch und passierte Tomaten angießen und 15 Minuten köcheln. Erbsen für die letzten 3 Minuten dazugeben und abschmecken.
+prep: Keeps 3 days in the fridge and freezes for 2 months. | Hält 3 Tage im Kühlschrank und lässt sich 2 Monate einfrieren.
+heat: 2.5 6 1 | Covered, stir halfway; the chicken must be piping hot. | Abgedeckt, nach der Hälfte umrühren; das Hähnchen muss durch und durch heiß sein. | pot over medium heat, 5–8 min | Topf bei mittlerer Hitze, 5–8 min
+
+## minestrone
+name: Minestrone with white beans | Minestrone mit weißen Bohnen
+desc: A thick Italian vegetable soup with beans and small pasta. Use whatever vegetables are left in the drawer. | Eine dicke italienische Gemüsesuppe mit Bohnen und kleinen Nudeln. Was im Gemüsefach übrig ist, darf mit hinein.
+meta: Hauptgericht; Mealprep, Vegetarisch; 6; 50 min; 15 min; 35 min
+nw: 380 15 58 9 9 2 11 1.4
+img: minestrone
+- 2 | EL | olive oil | Olivenöl | OL
+- 1 | Stück | onion | Zwiebel | O
+- 2 | Stück | carrots | Karotten | O
+- 2 | Stange | celery | Staudensellerie | O
+- 1 | Stück | courgette | Zucchini | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | Dose | chopped tomatoes | gehackte Tomaten | K
+- 1,5 | l | vegetable stock | Gemüsebrühe | W
+- 2 | Dose | white beans | weiße Bohnen | K | drained | abgetropft
+- 150 | g | small pasta | Suppennudeln | R
+- 50 | g | parmesan | Parmesan | M | to serve | zum Servieren
+> Dice onion, carrots, celery and courgette and sweat them in the oil for 10 minutes. Add the garlic for the last minute. | Zwiebel, Karotten, Sellerie und Zucchini würfeln und im Öl 10 Minuten andünsten. Knoblauch in der letzten Minute dazugeben.
+> Add tomatoes and stock and simmer for 15 minutes. | Tomaten und Brühe dazugeben und 15 Minuten köcheln lassen.
+> Add beans and pasta and cook for another 10 minutes. Season and serve with grated parmesan. | Bohnen und Nudeln dazugeben und weitere 10 Minuten kochen. Abschmecken und mit geriebenem Parmesan servieren.
+prep: Keeps 4 days in the fridge and freezes for 3 months; the pasta soaks up liquid, so add water when reheating. | Hält 4 Tage im Kühlschrank und lässt sich 3 Monate einfrieren. Die Nudeln ziehen Flüssigkeit, beim Erwärmen Wasser zugeben.
+heat: 3 7 1 | Add a splash of water (the pasta soaks up liquid), stir halfway. | Einen Schluck Wasser dazu (die Nudeln saugen Flüssigkeit), nach der Hälfte umrühren. | pot, 5–7 min | Topf, 5–7 min
+
+## pasta
+name: Cherry tomato pasta with basil | Kirschtomaten-Pasta mit Basilikum
+desc: Blistered cherry tomatoes, garlic and basil tossed with spaghetti – dinner in the time the pasta needs. | Angeschmorte Kirschtomaten, Knoblauch und Basilikum mit Spaghetti – das Abendessen ist fertig, wenn die Nudeln es sind.
+meta: Hauptgericht; Schnell, Vegetarisch; 2; 15 min; 5 min; 10 min
+nw: 610 20 92 9 18 5 7 0.6
+- 200 | g | spaghetti | Spaghetti | R
+- 400 | g | cherry tomatoes | Kirschtomaten | O
+- 3 | EL | olive oil | Olivenöl | OL
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | Bund | basil | Basilikum | O
+- 30 | g | parmesan | Parmesan | M
+> Cook the spaghetti in salted water. | Spaghetti in Salzwasser kochen.
+> Fry the halved tomatoes in the oil over high heat for 5 minutes until they burst, add the sliced garlic for the last minute. | Halbierte Tomaten im Öl bei starker Hitze 5 Minuten braten, bis sie aufplatzen, den Knoblauch in Scheiben für die letzte Minute dazu.
+> Toss the pasta with the tomatoes, a little cooking water, torn basil and parmesan. | Nudeln mit den Tomaten, etwas Nudelwasser, gezupftem Basilikum und Parmesan vermengen.
+prep: Best made fresh. | Am besten frisch.
+heat: 2 - 0 | Best fresh; with a splash of water, stir halfway. | Am besten frisch; mit einem Schluck Wasser, nach der Hälfte umrühren.
+
+## friedrice
+name: Vegetable fried rice with egg | Gebratener Gemüsereis mit Ei
+desc: The best use for yesterday's rice: crispy in the wok with vegetables, egg and soy sauce. | Die beste Verwertung für Reis vom Vortag: knusprig im Wok mit Gemüse, Ei und Sojasauce.
+meta: Hauptgericht; Schnell, Vegetarisch; 2; 20 min; 10 min; 10 min
+nw: 540 18 78 6 17 3 6 1.8
+img: friedrice
+- 400 | g | cooked rice | gekochter Reis | R | from the day before | vom Vortag
+- 3 | Stück | eggs | Eier | M
+- 150 | g | frozen peas | TK-Erbsen | T
+- 1 | Stück | carrots | Karotten | O
+- 4 | Stück | spring onions | Frühlingszwiebeln | O
+- 3 | EL | soy sauce | Sojasauce | W
+- 2 | EL | sunflower oil | Sonnenblumenöl | OL
+- 1 | TL | sesame oil | Sesamöl | OL
+> Heat the oil in a wok until very hot. Stir-fry the diced carrot and white spring onion for 2 minutes. | Öl im Wok stark erhitzen. Karottenwürfel und das Weiße der Frühlingszwiebeln 2 Minuten pfannenrühren.
+> Add the rice and fry without stirring for 1 minute, then toss for 3 minutes. Add the peas. | Reis dazugeben, 1 Minute ohne Rühren anbraten, dann 3 Minuten schwenken. Erbsen dazu.
+> Push everything to the side, scramble the eggs in the gap and mix in. Season with soy sauce and sesame oil, top with the green spring onion. | Alles an den Rand schieben, Eier in der Mitte stocken lassen und untermischen. Mit Sojasauce und Sesamöl würzen, mit dem Grün der Frühlingszwiebeln bestreuen.
+prep: Keeps 2 days in the fridge; reheat until piping hot. | Hält 2 Tage im Kühlschrank, gut durcherhitzen.
+heat: 2 - 1 | Sprinkle 1 tbsp water over it, covered; it must be piping hot. | 1 EL Wasser darüber, abgedeckt; er muss durch und durch heiß sein. | pan with a little oil, 4 min | Pfanne mit etwas Öl, 4 min
+
+## salmon
+name: Sheet-pan salmon with potatoes and green beans | Blechlachs mit Kartoffeln und grünen Bohnen
+desc: Potatoes roast first, then salmon and beans join them on the tray – one tray, little washing up. | Erst rösten die Kartoffeln, dann kommen Lachs und Bohnen aufs Blech – ein Blech, wenig Abwasch.
+meta: Hauptgericht; Schnell; 2; 40 min; 10 min; 30 min
+nw: 580 38 40 4 28 5 7 0.7
+img: salmon
+- 500 | g | waxy potatoes | festkochende Kartoffeln | O
+- 2 | Stück | salmon fillets | Lachsfilets | S | about 125 g each | je ca. 125 g
+- 250 | g | green beans | grüne Bohnen | O
+- 2 | EL | olive oil | Olivenöl | OL
+- 1 | Stück | lemon | Zitrone | O
+- 1 | Bund | dill | Dill | O
+> Heat the oven to 220 °C (fan 200 °C). Halve the potatoes, toss with half the oil and salt and roast for 20 minutes. | Backofen auf 220 °C (Umluft 200 °C) vorheizen. Kartoffeln halbieren, mit der Hälfte des Öls und Salz mischen und 20 Minuten rösten.
+> Add the beans tossed in the remaining oil and the salmon fillets with lemon slices and roast for 10–12 minutes. | Bohnen mit dem restlichen Öl und die Lachsfilets mit Zitronenscheiben dazulegen und 10–12 Minuten garen.
+> Sprinkle with chopped dill and a squeeze of lemon. | Mit gehacktem Dill und etwas Zitronensaft servieren.
+prep: Best made fresh. Leftover salmon keeps 1 day in the fridge and is good cold in a salad. | Am besten frisch. Übriger Lachs hält 1 Tag im Kühlschrank und schmeckt kalt im Salat.
+heat: cold | Leftover salmon is good cold in a salad; if warm, only gently (600 W, 1 min). | Reste vom Lachs schmecken kalt im Salat; wenn warm, dann nur sanft (600 W, 1 min).
+
+## stirfry
+name: Chicken noodle stir-fry | Hähnchen-Nudel-Pfanne
+desc: Egg noodles, chicken and crunchy vegetables in a quick honey and soy glaze. | Eiernudeln, Hähnchen und knackiges Gemüse in einer schnellen Honig-Soja-Glasur.
+meta: Hauptgericht; Schnell, Hähnchen; 2; 25 min; 10 min; 15 min
+nw: 620 42 76 14 14 3 6 2.0
+img: stirfry
+- 200 | g | egg noodles | Mie-Nudeln | R
+- 300 | g | chicken breast | Hähnchenbrust | F
+- 1 | Stück | red bell pepper | rote Paprika | O
+- 200 | g | broccoli | Brokkoli | O
+- 3 | EL | soy sauce | Sojasauce | W
+- 1 | EL | honey | Honig | W
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | EL | sunflower oil | Sonnenblumenöl | OL
+> Cook the noodles, drain and rinse briefly with cold water. Mix soy sauce, honey, grated garlic and 3 tablespoons of water. | Nudeln kochen, abgießen und kurz kalt abspülen. Sojasauce, Honig, geriebenen Knoblauch und 3 EL Wasser verrühren.
+> Stir-fry the chicken strips in the oil for 4 minutes. Add pepper and broccoli and fry for another 4 minutes. | Hähnchenstreifen im Öl 4 Minuten pfannenrühren. Paprika und Brokkoli dazu und weitere 4 Minuten braten.
+> Add noodles and sauce and toss for 2 minutes until glossy. | Nudeln und Sauce dazugeben und 2 Minuten schwenken, bis alles glänzt.
+prep: Keeps 2 days in the fridge. | Hält 2 Tage im Kühlschrank.
+heat: 1.5 - 0 | Covered, stir halfway; in a hot pan the vegetables stay crisper. | Abgedeckt, nach der Hälfte umrühren; in der heißen Pfanne bleibt das Gemüse knackiger. | hot pan or wok, 2–3 min | heiße Pfanne oder Wok, 2–3 min
+
+## wrap
+name: Halloumi wraps with tzatziki | Halloumi-Wraps mit Tzatziki
+desc: Golden halloumi, crunchy vegetables and quick garlic yogurt rolled into warm tortillas. | Goldbraun gebratener Halloumi, knackiges Gemüse und schnelles Knoblauch-Joghurt in warmen Tortillas.
+meta: Hauptgericht; Schnell, Vegetarisch; 2; 15 min; 10 min; 5 min
+nw: 640 32 48 7 34 18 5 2.2
+img: wrap
+- 250 | g | halloumi | Halloumi | M
+- 4 | Stück | large tortillas | große Tortillas | BW
+- 150 | g | Greek yogurt | griechischer Joghurt | M
+- 1 | Stück | cucumber | Gurke | O
+- 2 | Stück | tomatoes | Tomaten | O
+- 1 | Handvoll | lettuce | Salat | O
+- 1 | Zehe | garlic | Knoblauch | O
+> Grate a third of the cucumber, squeeze it out and mix with yogurt, grated garlic and salt. Slice the rest of the cucumber and the tomatoes. | Ein Drittel der Gurke reiben, ausdrücken und mit Joghurt, geriebenem Knoblauch und Salz verrühren. Restliche Gurke und Tomaten in Scheiben schneiden.
+> Fry the sliced halloumi in a dry pan for 2 minutes per side. Warm the tortillas. | Halloumischeiben in einer trockenen Pfanne pro Seite 2 Minuten braten. Tortillas erwärmen.
+> Fill the tortillas with lettuce, vegetables, halloumi and tzatziki and roll up. | Tortillas mit Salat, Gemüse, Halloumi und Tzatziki füllen und aufrollen.
+prep: Best made fresh. | Am besten frisch.
+heat: cold | Best fresh; eat leftovers cold. | Am besten frisch; Reste kalt essen.
+
+## aglio
+name: Spaghetti with garlic, chili and lemon | Spaghetti mit Knoblauch, Chili und Zitrone
+desc: The ten-minute classic from the cupboard, with lemon zest and parsley for freshness. | Der Zehn-Minuten-Klassiker aus dem Vorratsschrank, mit Zitronenabrieb und Petersilie für Frische.
+meta: Hauptgericht; Schnell, Vegetarisch; 2; 15 min; 5 min; 10 min
+nw: 560 16 84 4 18 3 5 0.3
+img: aglio
+- 200 | g | spaghetti | Spaghetti | R
+- 4 | EL | olive oil | Olivenöl | OL
+- 4 | Zehe | garlic | Knoblauch | O
+- 1 | Prise | chili flakes | Chiliflocken | G
+- 1 | Stück | lemon | Zitrone | O | zest and juice | Abrieb und Saft
+- 1 | Bund | parsley | Petersilie | O
+> Cook the spaghetti in well-salted water. | Spaghetti in kräftig gesalzenem Wasser kochen.
+> Warm the oil with sliced garlic and chili flakes over low heat for 4 minutes until the garlic is pale golden. | Öl mit Knoblauchscheiben und Chiliflocken bei schwacher Hitze 4 Minuten erwärmen, bis der Knoblauch hellgolden ist.
+> Toss the pasta with the garlic oil, a ladle of cooking water, lemon zest and juice and chopped parsley. | Nudeln mit dem Knoblauchöl, einer Kelle Nudelwasser, Zitronenabrieb und -saft und gehackter Petersilie vermengen.
+prep: Best made fresh. | Am besten frisch.
+heat: 1.5 - 0 | Best fresh; with a splash of water and a drop of oil. | Am besten frisch; mit einem Schluck Wasser und etwas Öl.
+
+## lasagne
+name: Vegetable lasagne | Gemüselasagne
+desc: Layers of roasted vegetables, tomato sauce and a light ricotta béchamel. Bakes once, feeds you three times. | Schichten aus Ofengemüse, Tomatensauce und leichter Ricotta-Béchamel. Einmal backen, dreimal essen.
+meta: Hauptgericht; Mealprep, Vegetarisch; 6; 1 h 30 min; 30 min; 1 h
+nw: 530 24 54 12 24 12 7 1.1
+img: lasagne
+- 2 | Stück | courgette | Zucchini | O
+- 1 | Stück | aubergine | Aubergine | O
+- 2 | Stück | red bell pepper | rote Paprika | O
+- 3 | EL | olive oil | Olivenöl | OL
+- 700 | g | passata | passierte Tomaten | K
+- 250 | g | ricotta | Ricotta | M
+- 400 | ml | milk | Milch | M
+- 2 | EL | flour | Mehl | B
+- 2 | EL | butter | Butter | M
+- 250 | g | lasagne sheets | Lasagneplatten | R
+- 125 | g | mozzarella | Mozzarella | M
+> Heat the oven to 200 °C. Dice the vegetables, toss with oil and salt and roast on a tray for 25 minutes. Mix with the passata. | Backofen auf 200 °C vorheizen. Gemüse würfeln, mit Öl und Salz mischen und auf einem Blech 25 Minuten rösten. Mit den passierten Tomaten mischen.
+> Melt the butter, stir in the flour, whisk in the milk and simmer for 3 minutes. Take off the heat and stir in the ricotta. Season. | Butter schmelzen, Mehl einrühren, Milch unterschlagen und 3 Minuten köcheln. Vom Herd nehmen, Ricotta unterrühren und abschmecken.
+> Layer vegetable sauce, lasagne sheets and white sauce three times in a dish, finish with white sauce and torn mozzarella. | Gemüsesauce, Lasagneplatten und weiße Sauce dreimal in eine Form schichten, mit weißer Sauce und zerzupftem Mozzarella abschließen.
+> Bake at 180 °C for 35 minutes. Rest for 10 minutes before cutting. | Bei 180 °C 35 Minuten backen. Vor dem Anschneiden 10 Minuten ruhen lassen.
+prep: Keeps 4 days in the fridge and freezes for 3 months in portions. Reheat covered in the oven or microwave. | Hält 4 Tage im Kühlschrank und lässt sich portionsweise 3 Monate einfrieren. Abgedeckt im Ofen oder in der Mikrowelle erwärmen.
+heat: 3 7 2 | Covered, check halfway, the middle must be hot. | Abgedeckt, nach der Hälfte prüfen, die Mitte muss heiß sein. | oven 180 °C covered, 20 min (frozen 40 min) | Ofen 180 °C abgedeckt, 20 min (gefroren 40 min)
+
+## peppers
+name: Stuffed peppers with rice and beans | Gefüllte Paprika mit Reis und Bohnen
+desc: Peppers filled with tomato rice, black beans and corn, baked with cheese on top. | Paprika gefüllt mit Tomatenreis, schwarzen Bohnen und Mais, mit Käse überbacken.
+meta: Hauptgericht; Vegetarisch, Mealprep; 4; 55 min; 15 min; 40 min
+nw: 470 19 66 10 14 7 12 1.0
+img: peppers
+- 4 | Stück | red bell pepper | rote Paprika | O
+- 150 | g | basmati rice | Basmatireis | R
+- 1 | Dose | black beans | schwarze Bohnen | K | drained | abgetropft
+- 1 | Dose | sweetcorn | Mais | K | drained | abgetropft
+- 200 | g | passata | passierte Tomaten | K
+- 1 | TL | ground cumin | Kreuzkümmel, gemahlen | G
+- 100 | g | grated cheddar | geriebener Cheddar | M
+> Cook the rice. Heat the oven to 200 °C. Halve the peppers lengthways and remove the seeds. | Reis kochen. Backofen auf 200 °C vorheizen. Paprika längs halbieren und entkernen.
+> Mix rice, beans, corn, passata and cumin, season and fill the pepper halves. | Reis, Bohnen, Mais, passierte Tomaten und Kreuzkümmel mischen, abschmecken und in die Paprikahälften füllen.
+> Cover with foil and bake for 25 minutes, then sprinkle with cheese and bake uncovered for 10 minutes. | Mit Alufolie abdecken und 25 Minuten backen, dann mit Käse bestreuen und offen 10 Minuten überbacken.
+prep: Keeps 3 days in the fridge. Freezes for 2 months, though the peppers get softer. | Hält 3 Tage im Kühlschrank. Lässt sich 2 Monate einfrieren, die Paprika wird dabei weicher.
+heat: 2.5 6 1 | Covered, with a splash of water. | Abgedeckt, mit einem Schluck Wasser. | oven 180 °C, 15 min | Ofen 180 °C, 15 min
+
+## risotto
+name: Mushroom risotto | Pilzrisotto
+desc: Creamy risotto with browned mushrooms, thyme and parmesan – 25 minutes of calm stirring. | Cremiges Risotto mit gebratenen Pilzen, Thymian und Parmesan – 25 Minuten entspanntes Rühren.
+meta: Hauptgericht; Vegetarisch; 2; 40 min; 10 min; 30 min
+nw: 640 20 86 4 22 11 4 1.5
+img: risotto
+- 160 | g | risotto rice | Risottoreis | R
+- 300 | g | mushrooms | Champignons | O
+- 1 | Stück | onion | Zwiebel | O
+- 750 | ml | vegetable stock | Gemüsebrühe | W
+- 100 | ml | white wine | Weißwein | X | or more stock | oder mehr Brühe
+- 2 | EL | butter | Butter | M
+- 40 | g | parmesan | Parmesan | M
+- 3 | Zweig | thyme | Thymian | O
+> Brown the sliced mushrooms in half the butter over high heat and set aside. Keep the stock hot. | Pilzscheiben in der Hälfte der Butter bei starker Hitze braun braten und beiseitestellen. Brühe heiß halten.
+> Soften the chopped onion, add the rice and stir for 1 minute. Deglaze with the wine. | Gehackte Zwiebel andünsten, Reis dazugeben und 1 Minute rühren. Mit Wein ablöschen.
+> Add the stock a ladle at a time, stirring, for about 18 minutes until creamy and just tender. | Brühe kellenweise unter Rühren zugeben, etwa 18 Minuten, bis das Risotto cremig und bissfest ist.
+> Stir in the mushrooms, thyme leaves, remaining butter and parmesan. Rest for 2 minutes. | Pilze, Thymianblättchen, restliche Butter und Parmesan unterrühren. 2 Minuten ruhen lassen.
+prep: Best made fresh. Leftovers keep 1 day and make good fried risotto cakes. | Am besten frisch. Reste halten 1 Tag und werden zu gebratenen Risotto-Talern.
+heat: 2 - 1 | Stir in a splash of stock or water. | Einen Schuss Brühe oder Wasser unterrühren. | as risotto cakes in a pan, 3 min per side | als Risotto-Taler in der Pfanne, 3 min je Seite
+
+## tacos
+name: Sweet potato black bean tacos | Süßkartoffel-Tacos mit schwarzen Bohnen
+desc: Roasted sweet potato, smoky beans, avocado and lime crema in soft tortillas. | Geröstete Süßkartoffel, rauchige Bohnen, Avocado und Limetten-Crema in weichen Tortillas.
+meta: Hauptgericht; Vegetarisch; 2; 35 min; 10 min; 25 min
+nw: 610 18 86 14 22 6 18 1.2
+img: tacos
+- 1 | Stück | sweet potato | Süßkartoffel | O | about 400 g | ca. 400 g
+- 1 | Dose | black beans | schwarze Bohnen | K | drained | abgetropft
+- 1 | TL | smoked paprika | geräuchertes Paprikapulver | G
+- 6 | Stück | small tortillas | kleine Tortillas | BW
+- 1 | Stück | avocado | Avocado | O
+- 100 | g | sour cream | Schmand | M
+- 1 | Stück | lime | Limette | O
+- 1 | EL | olive oil | Olivenöl | OL
+> Heat the oven to 220 °C. Dice the sweet potato, toss with oil, smoked paprika and salt and roast for 25 minutes. | Backofen auf 220 °C vorheizen. Süßkartoffel würfeln, mit Öl, Rauchpaprika und Salz mischen und 25 Minuten rösten.
+> Warm the beans with a pinch of salt and mash them lightly. Mix the sour cream with lime juice. | Bohnen mit etwas Salz erwärmen und leicht zerdrücken. Schmand mit Limettensaft verrühren.
+> Warm the tortillas and fill with beans, sweet potato, avocado slices and lime crema. | Tortillas erwärmen und mit Bohnen, Süßkartoffel, Avocadoscheiben und Limetten-Crema füllen.
+prep: Roasted sweet potato and beans keep 3 days in the fridge; assemble fresh. | Geröstete Süßkartoffel und Bohnen halten 3 Tage im Kühlschrank, frisch zusammenbauen.
+heat: 1.5 - 0 | Reheat only the sweet potato and beans, assemble fresh. | Nur Süßkartoffel und Bohnen erwärmen, frisch zusammensetzen. | oven 200 °C, 8 min | Ofen 200 °C, 8 min
+
+## falafel
+name: Falafel bowls with hummus | Falafel-Bowls mit Hummus
+desc: Baked falafel from canned chickpeas with hummus, couscous and a crunchy salad. | Gebackene Falafel aus Dosen-Kichererbsen mit Hummus, Couscous und knackigem Salat.
+meta: Hauptgericht; Vegetarisch, Mealprep; 4; 45 min; 20 min; 25 min
+nw: 560 20 70 6 22 3 14 1.3
+img: falafel
+- 2 | Dose | chickpeas | Kichererbsen | K | drained | abgetropft
+- 1 | Stück | onion | Zwiebel | O
+- 2 | Zehe | garlic | Knoblauch | O
+- 1 | Bund | parsley | Petersilie | O
+- 2 | TL | ground cumin | Kreuzkümmel, gemahlen | G
+- 3 | EL | flour | Mehl | B
+- 200 | g | couscous | Couscous | R
+- 200 | g | hummus | Hummus | X
+- 1 | Stück | cucumber | Gurke | O
+- 250 | g | cherry tomatoes | Kirschtomaten | O
+- 3 | EL | olive oil | Olivenöl | OL
+> Heat the oven to 200 °C. Blitz one can of chickpeas with onion, garlic, parsley, cumin, flour and salt to a coarse paste, then pulse in the second can briefly. | Backofen auf 200 °C vorheizen. Eine Dose Kichererbsen mit Zwiebel, Knoblauch, Petersilie, Kreuzkümmel, Mehl und Salz grob pürieren, dann die zweite Dose kurz untermixen.
+> Shape 16 small patties, brush with oil and bake for 25 minutes, turning once. | 16 kleine Bällchen formen, mit Öl bestreichen und 25 Minuten backen, dabei einmal wenden.
+> Pour boiling salted water over the couscous and leave for 5 minutes. Dice cucumber and tomatoes. Serve everything in bowls with hummus. | Couscous mit kochendem Salzwasser übergießen und 5 Minuten quellen lassen. Gurke und Tomaten würfeln. Alles mit Hummus in Schalen anrichten.
+prep: Falafel keep 4 days in the fridge and freeze for 2 months; crisp them up in the oven. Keep the salad separate. | Falafel halten 4 Tage im Kühlschrank und lassen sich 2 Monate einfrieren, im Ofen wieder knusprig backen. Salat getrennt aufbewahren.
+heat: 1 2.5 0 | They soften in the microwave. | In der Mikrowelle werden sie weich. | oven 200 °C, 6–8 min to crisp them up | Ofen 200 °C, 6–8 min, dann sind sie wieder knusprig

@@ -1,0 +1,21 @@
+# Runs the API test suite (tests/, Python standard library unittest, no packages needed).
+# Needs a Forgejo runner with the label "docker". The job runs in the official Python image; Node.js is installed
+# first because actions/checkout is a JavaScript action.
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  api-tests:
+    runs-on: docker
+    container:
+      image: python:3.13
+    timeout-minutes: 15
+    steps:
+      - name: Node.js for actions/checkout
+        run: apt-get update -qq && apt-get install -y -qq --no-install-recommends nodejs >/dev/null
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: python -m unittest discover tests -v

@@ -1,0 +1,9 @@
+/* Kombüse bar above Swagger UI (the page's CSP allows no inline styles) */
+body { margin: 0; background: #fff; }
+.kmb-bar { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; align-items: center; padding: .6rem 1.2rem;
+  background: #2b2f36; color: #e9e6e1; font: 14px/1.4 system-ui, sans-serif; }
+.kmb-bar a { color: #ffb38a; text-decoration: none; }
+.kmb-bar a:hover { text-decoration: underline; }
+.kmb-home { font-weight: 600; font-size: 16px; }
+.kmb-hint { flex: 1 1 24rem; color: #c9c4bd; font-size: 13px; }
+.kmb-json { font-family: ui-monospace, monospace; font-size: 13px; }

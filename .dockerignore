@@ -1,0 +1,5 @@
+.git
+data
+secrets
+**/__pycache__
+docker-compose*.yml
