@@ -4,6 +4,9 @@ A self-hosted kitchen app for one household: discover dishes by swiping, keep yo
 cook step by step, track your freezer and cupboard, and turn it all into a shopping list – with an AI that learns
 what you like, using Claude, a local model or your own agent.
 
+**The name:** *Kombüse* [kɔmˈbyːzə], roughly “kom-BÜ-zuh”, is German for a ship's galley, the small kitchen on board.
+The *ü* sounds like the *u* in French *tu*; without umlauts it is written *kombuese*, as in this repository.
+
 > **Status:** young. Kombüse runs daily in one home. It has sign-in, CSRF and SSRF protection and encrypted
 > credentials, but has not had an external review yet: prefer a trusted network or VPN over exposing it directly to
 > the internet.
@@ -27,7 +30,7 @@ shopping list, pantry and two members:
 
 ```sh
 cp docker-compose.example.yml docker-compose.yml
-KOMBUESE_DEMO=true docker compose up -d --build      # or: environment KOMBUESE_DEMO=de for German
+KOMBUESE_DEMO=true docker compose up -d             # or: KOMBUESE_DEMO=de for German
 docker compose logs kombuese | grep Demo             # the password of the account "demo", shown once
 ```
 
@@ -57,7 +60,7 @@ The demo only fills an installation without accounts; to start over, stop the co
 
 ```sh
 cp docker-compose.example.yml docker-compose.yml   # adjust KOMBUESE_URLS
-docker compose up -d --build
+docker compose up -d
 ```
 
 Open http://localhost:9926 and create the first account (it becomes the admin), or restore a backup of another

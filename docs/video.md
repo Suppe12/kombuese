@@ -105,7 +105,8 @@ Video sites change often, and then yt-dlp needs an update. The image pins a vers
   from then on, also after a restart. Switch it off in the settings or with `KOMBUESE_YTDLP_AUTOUPDATE=false` if the
   container should not install anything from the internet.
 - **Settings → Video & Whisper → Update yt-dlp** does the same at once and shows the version.
-- Or build the image with a newer pin: `docker compose build --build-arg YTDLP_VERSION=2026.12.01`.
+- Or build the image yourself with a newer pin (`build: .` instead of `image:` in the compose file):
+  `docker compose build --build-arg YTDLP_VERSION=2026.12.01`.
 - To go back to the image's version, delete `<data>/tools/yt-dlp`.
 
 YouTube needs a JavaScript runtime for yt-dlp; the image brings the small QuickJS (`qjs`). If YouTube downloads fail

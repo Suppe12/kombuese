@@ -10,7 +10,7 @@ home server or a Raspberry Pi; plan for about 100–250 MB of memory.
 git clone https://github.com/Suppe12/kombuese.git && cd kombuese
 cp docker-compose.example.yml docker-compose.yml
 # edit KOMBUESE_URLS (the addresses you will open the app with), optionally KOMBUESE_SECRET_KEY
-docker compose up -d --build
+docker compose up -d
 ```
 
 Open `http://<host>:9926`. The first visitor creates the first account, which becomes the admin – or chooses
@@ -95,8 +95,8 @@ internet.
 ## Updating
 
 ```sh
-git pull
-docker compose up -d --build
+docker compose pull
+docker compose up -d
 ```
 
 Database changes are applied on start. Make a backup first (⚙️ Settings → Backup, or
